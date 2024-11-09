@@ -11,6 +11,7 @@ const serieListRef = ref<typeof SerieList | null>(null)
 const serieEdit = ref<any>(null)
 
 function hableCreate() {
+  console.log('Botón Crear presionado')
   serieEdit.value = null
   mostrarDialog.value = true
 }

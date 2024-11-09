@@ -31,7 +31,8 @@ export class SeriesService {
     serie.sinopsis = createSerieDto.sinopsis.trim();
     serie.director = createSerieDto.director.trim();
     serie.temporadas = createSerieDto.temporadas;
-    serie.fechaEstreno = createSerieDto.fechaEstreno; 
+    serie.tipo_genero = createSerieDto.tipo_genero.trim(); 
+    serie.fechaEstreno = createSerieDto.fechaEstreno;
     return this.seriesRepository.save(serie);
   }
 
@@ -55,6 +56,7 @@ export class SeriesService {
     serie.director=updateSerieDto.director.trim();
     serie.temporadas=updateSerieDto.temporadas;
     serie.fechaEstreno=updateSerieDto.fechaEstreno;
+    serie.tipo_genero=updateSerieDto.tipo_genero.trim();
     const serieUpdate = Object.assign(serie, updateSerieDto);
     return this.seriesRepository.save(serieUpdate);
   }

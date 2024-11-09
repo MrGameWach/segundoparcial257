@@ -25,6 +25,9 @@ export class Serie {
   @Column('integer',{name:'temporadas'})
   temporadas: number;
 
+  @Column('varchar', { length: 20 })
+  tipo_genero: string;
+
   @Column('date', {name:'fecha_Estreno' })
   fechaEstreno: Date;
 

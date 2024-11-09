@@ -30,6 +30,13 @@ export class CreateSerieDto {
   @IsNotEmpty({ message: 'El campo teporadas es obligatorio' })
   @IsNumber({},{ message: 'El campo temporadas debe ser tipo cadena' })
   readonly temporadas : number;
+
+  @ApiProperty()
+  @IsString({ message: 'El campo tipo_genero debe ser tipo cadena' })
+  @MaxLength(20, {
+    message: 'El campo tipo_genero no de ser mayor a 30 caracteres',
+  })
+  readonly tipo_genero : string;
   
   @ApiProperty()
   @IsDefined({message: 'El campo fechaEstreno debe estar definido'})
